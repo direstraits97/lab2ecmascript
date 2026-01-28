@@ -9,6 +9,16 @@ async function collectData() {
     const response = await fetch(url);
     const courses = await response.json();
 
+    document.querySelector("#search").addEventListener("input", (e) => {
+      let courseSearch = document.querySelector("#search").value;
+      console.log(courseSearch, courses);
+      let filteredCourses = courses.filter(
+        (course) =>
+          course.coursename.toLowerCase().includes(courseSearch) ||
+          course.code.toLowerCase().includes(courseSearch),
+      );
+      displayCourses(filteredCourses);
+    });
     displayCourses(courses);
   } catch (error) {
     console.error("Fel: " + error);
@@ -16,7 +26,8 @@ async function collectData() {
 }
 
 function displayCourses(courses) {
-  let coursesTableEl = document.querySelector("#coursestable");
+  let coursesTableContent = document.querySelector("#coursestablecontent");
+  coursesTableContent.innerHTML = "";
 
   courses.forEach((course) => {
     let courseCode = document.createElement("td");
@@ -37,6 +48,6 @@ function displayCourses(courses) {
     courseRow.appendChild(courseName);
     courseRow.appendChild(courseProgression);
 
-    coursesTableEl.appendChild(courseRow);
+    coursesTableContent.appendChild(courseRow);
   });
 }

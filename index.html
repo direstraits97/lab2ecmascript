@@ -20,13 +20,21 @@
     <main>
       <section>
         <h2>Kurser</h2>
-        <!--Sökfunktion-->
+        <p id="searchtitle">Sök:</p>
+        <input
+          type="text"
+          id="search"
+          placeholder="Sök efter kurskod eller kursnamn"
+        />
         <table id="coursestable">
-          <tr>
-            <th>Kurskod</th>
-            <th>Namn</th>
-            <th>Progression</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Kurskod</th>
+              <th>Namn</th>
+              <th>Progression</th>
+            </tr>
+          </thead>
+          <tbody id="coursestablecontent"></tbody>
         </table>
       </section>
     </main>
