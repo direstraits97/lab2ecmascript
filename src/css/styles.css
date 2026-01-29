@@ -39,6 +39,9 @@ th {
   text-align: left;
   text-decoration: underline;
 }
+th:hover {
+  cursor: pointer;
+}
 footer {
   background-color: rgb(196, 195, 195);
   padding: 1rem;
@@ -54,4 +57,33 @@ footer {
   padding: 1rem;
   margin-bottom: 60px;
   font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  section {
+    width: 75%;
+  }
+}
+@media (max-width: 600px) {
+  section {
+    width: 90%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  #searchtitle {
+    font-size: 1.3rem;
+  }
+  #search {
+    font-size: 1rem;
+  }
+  table {
+    font-size: 1rem;
+  }
+  #tablecontainer {
+    overflow-x: auto;
+  }
 }

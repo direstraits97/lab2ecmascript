@@ -15,7 +15,7 @@
   </head>
   <body>
     <header>
-      <h1>Ramschema för Webbutvecklingsprogrammet</h1>
+      <h1>Ramschema för Webbutvecklings&shy;programmet</h1>
     </header>
     <main>
       <section>
@@ -26,16 +26,18 @@
           id="search"
           placeholder="Sök efter kurskod eller kursnamn"
         />
-        <table id="coursestable">
-          <thead>
-            <tr>
-              <th>Kurskod</th>
-              <th>Namn</th>
-              <th>Progression</th>
-            </tr>
-          </thead>
-          <tbody id="coursestablecontent"></tbody>
-        </table>
+        <div id="tablecontainer">
+          <table>
+            <thead>
+              <tr>
+                <th id="coursecode">Kurskod</th>
+                <th id="coursename">Namn</th>
+                <th id="courseprogression">Progression</th>
+              </tr>
+            </thead>
+            <tbody id="coursestablecontent"></tbody>
+          </table>
+        </div>
       </section>
     </main>
     <footer>
