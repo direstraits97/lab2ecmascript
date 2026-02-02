@@ -5,9 +5,45 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Lab 2 - ECMAScript</title>
   </head>
   <body>
+    <header>
+      <h1>Ramschema för Webbutvecklings&shy;programmet</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Kurser</h2>
+        <p id="searchtitle">Sök:</p>
+        <input
+          type="text"
+          id="search"
+          placeholder="Sök efter kurskod eller kursnamn"
+        />
+        <div id="tablecontainer">
+          <table>
+            <thead>
+              <tr>
+                <th id="coursecode">Kurskod</th>
+                <th id="coursename">Namn</th>
+                <th id="courseprogression">Progression</th>
+              </tr>
+            </thead>
+            <tbody id="coursestablecontent"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Lab 2 - ECMAScript</p>
+      <p>JOBA1602</p>
+    </footer>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
